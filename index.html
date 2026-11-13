@@ -262,7 +262,7 @@ body {
         transform 1s cubic-bezier(.2,.7,.2,1);
 }
 
-/* Dark overlay */
+/* DARK OVERLAY */
 
 .service-card::before {
     content: "";
@@ -273,37 +273,37 @@ body {
     transition: background .4s ease;
 }
 
-/* Individual images - replace later */
+/* FOUR IMAGES */
 
 .local-card {
-    background-image: url("local-cabs.jpg");
+    background-image: url("https://raw.githubusercontent.com/mradnanhaiking-afk/cab-miitra-/main/images%20(2).jpg");
 }
 
 .airport-card {
-    background-image: url("airport-cabs.jpg");
+    background-image: url("https://raw.githubusercontent.com/mradnanhaiking-afk/cab-miitra-/main/gettyimages-2182068921-612x612.jpg");
 }
 
 .outstation-card {
-    background-image: url("outstation-cabs.jpg");
+    background-image: url("https://raw.githubusercontent.com/mradnanhaiking-afk/cab-miitra-/main/images%20(3).jpg");
 }
 
 .trip-card {
-    background-image: url("trip-packages.jpg");
+    background-image: url("https://raw.githubusercontent.com/mradnanhaiking-afk/cab-miitra-/main/images%20(4).jpg");
 }
 
-/* 2 cards from top */
+/* TOP ANIMATION */
 
 .from-top {
     transform: translateY(-100px);
 }
 
-/* 2 cards from bottom */
+/* BOTTOM ANIMATION */
 
 .from-bottom {
     transform: translateY(100px);
 }
 
-/* Visible state */
+/* ANIMATION ACTIVATED ON SCROLL */
 
 .service-card.show {
     opacity: 1;
@@ -324,17 +324,13 @@ body {
     text-shadow: 0 2px 8px rgba(0,0,0,.2);
 }
 
-/* Airport green overlay */
+/* AIRPORT GREEN OVERLAY */
 
 .airport-card::before {
     background: rgba(24, 166, 83, .86);
 }
 
-/* Hover effect */
-
-.service-card:hover {
-    background-size: cover;
-}
+/* HOVER EFFECT */
 
 .service-card:hover::before {
     background-color: rgba(4, 24, 39, .55);
@@ -474,9 +470,7 @@ body {
 
 <body>
 
-<!-- =========================
-     FIRST PAGE
-========================= -->
+<!-- FIRST PAGE -->
 
 <section class="hero" id="home">
 
@@ -528,48 +522,26 @@ body {
 </section>
 
 
-<!-- =========================
-     SECOND PAGE - FOUR CARDS
-========================= -->
+<!-- SECOND PAGE - FOUR SERVICE CARDS -->
 
 <section class="services-section" id="services">
 
     <div class="services-grid">
 
-        <!-- 1: FROM TOP -->
-
         <div class="service-card local-card from-top">
-            <h2>
-                Local<br>
-                Cabs
-            </h2>
+            <h2>Local<br>Cabs</h2>
         </div>
-
-        <!-- 2: FROM BOTTOM -->
 
         <div class="service-card airport-card from-bottom">
-            <h2>
-                Airport<br>
-                Cabs
-            </h2>
+            <h2>Airport<br>Cabs</h2>
         </div>
-
-        <!-- 3: FROM TOP -->
 
         <div class="service-card outstation-card from-top">
-            <h2>
-                Outstation<br>
-                Cabs
-            </h2>
+            <h2>Outstation<br>Cabs</h2>
         </div>
 
-        <!-- 4: FROM BOTTOM -->
-
         <div class="service-card trip-card from-bottom">
-            <h2>
-                Trip<br>
-                Packages
-            </h2>
+            <h2>Trip<br>Packages</h2>
         </div>
 
     </div>
@@ -594,9 +566,7 @@ body {
 </a>
 
 
-<!-- =========================
-     SCROLL REVEAL SCRIPT
-========================= -->
+<!-- SCROLL ANIMATION -->
 
 <script>
 
