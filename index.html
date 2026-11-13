@@ -242,8 +242,6 @@ body {
     gap: 25px;
 }
 
-/* SERVICE CARDS */
-
 .service-card {
     height: 466px;
     position: relative;
@@ -261,8 +259,6 @@ body {
         opacity .9s ease,
         transform 1s cubic-bezier(.2,.7,.2,1);
 }
-
-/* DARK OVERLAY */
 
 .service-card::before {
     content: "";
@@ -291,26 +287,20 @@ body {
     background-image: url("https://raw.githubusercontent.com/mradnanhaiking-afk/cab-miitra-/main/images%20(4).jpg");
 }
 
-/* TOP ANIMATION */
+/* CARD ANIMATIONS */
 
 .from-top {
     transform: translateY(-100px);
 }
 
-/* BOTTOM ANIMATION */
-
 .from-bottom {
     transform: translateY(100px);
 }
-
-/* ANIMATION ACTIVATED ON SCROLL */
 
 .service-card.show {
     opacity: 1;
     transform: translateY(0);
 }
-
-/* CARD TEXT */
 
 .service-card h2 {
     color: #fff;
@@ -338,6 +328,78 @@ body {
 
 .airport-card:hover::before {
     background-color: rgba(24, 166, 83, .72);
+}
+
+/* =========================
+   THIRD PAGE - ABOUT SECTION
+========================= */
+
+.about-section {
+    width: 100%;
+    min-height: 645px;
+    background: #1c707b;
+    color: white;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+
+    padding: 150px 0 100px;
+}
+
+/* LEFT SIDE */
+
+.about-left {
+    padding: 0 25px 0 0;
+}
+
+.about-left h2 {
+    font-size: clamp(30px, 3vw, 42px);
+    font-weight: 600;
+    line-height: 1.3;
+    white-space: nowrap;
+}
+
+/* RIGHT SIDE */
+
+.about-right {
+    padding: 0 25px 0 0;
+}
+
+.about-right p {
+    max-width: 750px;
+    font-size: 22px;
+    line-height: 1.62;
+    font-weight: 400;
+    color: rgba(255,255,255,.92);
+}
+
+/* ABOUT BUTTON */
+
+.about-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 240px;
+    height: 67px;
+
+    margin-top: 98px;
+
+    background: #fff;
+    color: #52767a;
+
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 3px;
+
+    transition: .3s ease;
+}
+
+.about-button:hover {
+    background: #e9f3f4;
+    transform: translateY(-3px);
 }
 
 /* =========================
@@ -378,6 +440,19 @@ body {
 
     .service-card h2 {
         font-size: 25px;
+    }
+
+    .about-section {
+        min-height: 540px;
+        padding-top: 120px;
+    }
+
+    .about-right p {
+        font-size: 18px;
+    }
+
+    .about-button {
+        margin-top: 65px;
     }
 }
 
@@ -422,6 +497,40 @@ body {
 
     .service-card h2 {
         font-size: 25px;
+    }
+
+    /* ABOUT MOBILE */
+
+    .about-section {
+        min-height: auto;
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 75px 25px 80px;
+    }
+
+    .about-left {
+        padding: 0;
+    }
+
+    .about-left h2 {
+        font-size: 32px;
+        white-space: normal;
+    }
+
+    .about-right {
+        padding: 0;
+    }
+
+    .about-right p {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .about-button {
+        width: 210px;
+        height: 60px;
+        margin-top: 45px;
+        font-size: 14px;
     }
 }
 
@@ -470,7 +579,9 @@ body {
 
 <body>
 
-<!-- FIRST PAGE -->
+<!-- =========================
+     FIRST PAGE
+========================= -->
 
 <section class="hero" id="home">
 
@@ -522,7 +633,9 @@ body {
 </section>
 
 
-<!-- SECOND PAGE - FOUR SERVICE CARDS -->
+<!-- =========================
+     SECOND PAGE - SERVICES
+========================= -->
 
 <section class="services-section" id="services">
 
@@ -549,7 +662,41 @@ body {
 </section>
 
 
-<!-- FIXED CONTACT BUTTONS -->
+<!-- =========================
+     THIRD PAGE - ABOUT US
+========================= -->
+
+<section class="about-section" id="about">
+
+    <div class="about-left">
+
+        <h2>Established in 2014</h2>
+
+    </div>
+
+    <div class="about-right">
+
+        <p>
+            Welcome to our car rental and trip package services!
+            We understand that planning a trip can be both exciting
+            and overwhelming, and we’re here to make your travel
+            experience seamless and memorable. Let us share a bit
+            about who we are and why we are the right choice for
+            your travel needs.
+        </p>
+
+        <a href="#about" class="about-button">
+            ABOUT US
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FIXED CONTACT BUTTONS
+========================= -->
 
 <a href="tel:+910000000000" class="contact-fixed" id="contact">
     <span class="contact-icon">☎</span>
@@ -566,7 +713,9 @@ body {
 </a>
 
 
-<!-- SCROLL ANIMATION -->
+<!-- =========================
+     SCROLL ANIMATION
+========================= -->
 
 <script>
 
