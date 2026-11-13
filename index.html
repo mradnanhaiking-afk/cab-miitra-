@@ -3,13 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#263b3d">
-
+<meta name="theme-color" content="#090f13">
 <title>CabMitra - Where Journeys Begin</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 * {
@@ -24,34 +23,23 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
+    background: #f3f9fa;
     overflow-x: hidden;
 }
 
-/* HERO SECTION */
+/* =========================
+   FIRST PAGE - HERO
+========================= */
 
 .hero {
-    position: relative;
-    width: 100%;
     min-height: 100vh;
-    min-height: 100svh;
-
+    width: 100%;
+    position: relative;
     background:
-        linear-gradient(
-            90deg,
-            rgba(8, 32, 37, 0.48),
-            rgba(12, 24, 25, 0.39),
-            rgba(0, 34, 54, 0.50)
-        ),
-        linear-gradient(
-            rgba(0, 0, 0, 0.18),
-            rgba(0, 0, 0, 0.25)
-        ),
+        linear-gradient(90deg, rgba(3, 13, 20, .82), rgba(3, 13, 20, .45)),
         url("https://raw.githubusercontent.com/mradnanhaiking-afk/cab-miitra-/main/images.jpg");
-
     background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-
+    background-position: center;
     display: flex;
     flex-direction: column;
     color: white;
@@ -61,514 +49,461 @@ body {
 
 .navbar {
     width: 100%;
-    min-height: 138px;
-
+    min-height: 90px;
+    padding: 12px 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    padding: 0 10.8%;
-
     position: relative;
     z-index: 10;
-}
-
-/* LOGO */
-
-.logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    min-width: 230px;
+    background: rgba(0, 0, 0, .16);
+    backdrop-filter: blur(5px);
 }
 
 .logo img {
-    width: 245px;
-    height: 105px;
-    object-fit: contain;
+    width: 155px;
+    height: auto;
     display: block;
 }
-
-/* NAVIGATION */
 
 .nav-links {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 38px;
+    gap: 27px;
 }
 
 .nav-links a {
     color: white;
-    font-size: 17px;
-    font-weight: 500;
     text-decoration: none;
-    white-space: nowrap;
-    transition: 0.3s ease;
+    font-size: 13px;
+    font-weight: 500;
+    transition: .3s;
 }
 
 .nav-links a:hover {
-    color: #27c451;
+    color: #26c46c;
 }
 
-.dropdown {
-    display: flex;
-    align-items: center;
-    gap: 9px;
-}
-
-.dropdown svg {
-    width: 14px;
-    height: 14px;
-    transition: 0.3s ease;
-}
-
-.dropdown:hover svg {
-    transform: rotate(180deg);
-}
-
-/* NAV BOOK BUTTON */
-
-.nav-book {
-    background: #20b748;
+.nav-links .nav-book {
+    background: #20ad60;
+    padding: 13px 23px;
+    border-radius: 4px;
     color: white;
-
-    border: none;
-    padding: 15px 35px;
-
-    min-width: 178px;
-    min-height: 51px;
-
-    font-family: inherit;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 2px;
-
-    cursor: pointer;
-    text-decoration: none;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    transition: 0.3s ease;
+    font-weight: 600;
 }
 
-.nav-book:hover {
-    background: #159b38;
-    transform: translateY(-2px);
+.nav-links .nav-book:hover {
+    background: #168b4b;
+    color: white;
 }
 
 /* HERO CONTENT */
 
 .hero-content {
-    width: 100%;
     flex: 1;
-
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-
+    align-items: center;
     text-align: center;
-
-    padding: 15px 20px 90px;
-
-    animation: fadeUp 1.2s ease both;
+    padding: 40px 20px 90px;
+    animation: heroFade .9s ease both;
 }
 
-.hero-small-title {
-    font-size: 32px;
-    font-weight: 600;
-    margin-bottom: 25px;
-    line-height: 1.4;
+.hero-small {
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
 }
 
 .hero-content h1 {
-    font-size: clamp(35px, 3.1vw, 55px);
-    font-weight: 700;
-    line-height: 1.28;
-
-    max-width: 1000px;
+    font-size: clamp(35px, 5vw, 62px);
+    line-height: 1.2;
+    font-weight: 800;
     margin-bottom: 22px;
+    text-shadow: 0 3px 15px rgba(0,0,0,.3);
 }
 
-.hero-description {
-    max-width: 800px;
-
-    font-size: 17px;
-    line-height: 1.7;
-    font-weight: 400;
-
-    margin-bottom: 57px;
+.hero-content p {
+    max-width: 750px;
+    font-size: 15px;
+    line-height: 1.9;
+    color: rgba(255,255,255,.9);
+    margin-bottom: 32px;
 }
-
-/* HERO BUTTONS */
 
 .hero-buttons {
     display: flex;
+    gap: 15px;
     justify-content: center;
-    align-items: center;
-    gap: 35px;
+    flex-wrap: wrap;
 }
 
-.hero-btn {
-    min-width: 196px;
-    min-height: 56px;
-
-    padding: 15px 30px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+.hero-buttons a {
     text-decoration: none;
-
-    font-size: 14px;
-    letter-spacing: 2px;
-    font-weight: 500;
-
-    transition: 0.3s ease;
+    padding: 14px 29px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: .3s;
 }
 
 .book-btn {
+    background: #20ad60;
     color: white;
-    border: 2px solid white;
-    background: transparent;
-}
-
-.book-btn:hover {
-    background: #20b748;
-    border-color: #20b748;
 }
 
 .call-btn {
-    color: #08729b;
-    background: white;
-    border: 2px solid white;
+    border: 1px solid white;
+    color: white;
+}
+
+.book-btn:hover {
+    background: #168b4b;
+    transform: translateY(-3px);
 }
 
 .call-btn:hover {
-    background: #20b748;
-    color: white;
-    border-color: #20b748;
+    background: white;
+    color: #111;
+    transform: translateY(-3px);
 }
 
-/* CONTACT BUTTON */
+/* CONTACT BUTTONS */
 
-.contact-floating {
+.contact-fixed {
     position: fixed;
-    bottom: 20px;
-    left: 27px;
-
-    z-index: 100;
-
+    bottom: 24px;
+    left: 20px;
+    z-index: 99;
     display: flex;
     align-items: center;
-    gap: 5px;
-
+    gap: 10px;
     text-decoration: none;
 }
 
-.phone-circle {
-    width: 77px;
-    height: 77px;
-
+.contact-icon {
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
-    background: #ff555b;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
-
-    transition: 0.3s ease;
-}
-
-.phone-circle:hover {
-    transform: scale(1.08);
-}
-
-.phone-circle svg {
-    width: 35px;
-    height: 35px;
-    fill: white;
+    background: #e53232;
+    color: white;
+    display: grid;
+    place-items: center;
+    font-size: 23px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.25);
 }
 
 .contact-label {
     background: white;
-    color: #444;
-
-    font-size: 17px;
-    padding: 7px 19px;
-
-    border-radius: 11px;
-    white-space: nowrap;
+    color: #222;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    box-shadow: 0 3px 12px rgba(0,0,0,.15);
 }
 
-/* WHATSAPP BUTTON */
-
-.whatsapp-floating {
+.whatsapp-fixed {
     position: fixed;
-    bottom: 29px;
-    right: 47px;
-
-    z-index: 100;
-
-    width: 70px;
-    height: 70px;
-
-    background: #19ce65;
+    right: 20px;
+    bottom: 24px;
+    z-index: 99;
+    width: 51px;
+    height: 51px;
     border-radius: 50%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+    background: #20c767;
     color: white;
+    display: grid;
+    place-items: center;
     text-decoration: none;
-
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-
-    transition: 0.3s ease;
+    font-size: 26px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.2);
 }
 
-.whatsapp-floating:hover {
-    transform: scale(1.1);
-    background: #0eae51;
+/* =========================
+   SECOND PAGE - SERVICES
+========================= */
+
+.services-section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 75px 13px 90px;
+    background: #f3f9fa;
+    display: flex;
+    align-items: flex-start;
 }
 
-.whatsapp-floating svg {
-    width: 39px;
-    height: 39px;
-    fill: white;
+.services-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
 }
 
-/* ANIMATION */
+/* SERVICE CARDS */
 
-@keyframes fadeUp {
+.service-card {
+    height: 466px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    isolation: isolate;
+
+    opacity: 0;
+    transition:
+        opacity .9s ease,
+        transform 1s cubic-bezier(.2,.7,.2,1);
+}
+
+/* Dark overlay */
+
+.service-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(4, 24, 39, .72);
+    z-index: -1;
+    transition: background .4s ease;
+}
+
+/* Individual images - replace later */
+
+.local-card {
+    background-image: url("local-cabs.jpg");
+}
+
+.airport-card {
+    background-image: url("airport-cabs.jpg");
+}
+
+.outstation-card {
+    background-image: url("outstation-cabs.jpg");
+}
+
+.trip-card {
+    background-image: url("trip-packages.jpg");
+}
+
+/* 2 cards from top */
+
+.from-top {
+    transform: translateY(-100px);
+}
+
+/* 2 cards from bottom */
+
+.from-bottom {
+    transform: translateY(100px);
+}
+
+/* Visible state */
+
+.service-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* CARD TEXT */
+
+.service-card h2 {
+    color: #fff;
+    font-size: clamp(23px, 2.6vw, 34px);
+    font-weight: 600;
+    line-height: 1.35;
+    padding: 15px;
+    max-width: 240px;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 2px 8px rgba(0,0,0,.2);
+}
+
+/* Airport green overlay */
+
+.airport-card::before {
+    background: rgba(24, 166, 83, .86);
+}
+
+/* Hover effect */
+
+.service-card:hover {
+    background-size: cover;
+}
+
+.service-card:hover::before {
+    background-color: rgba(4, 24, 39, .55);
+}
+
+.airport-card:hover::before {
+    background-color: rgba(24, 166, 83, .72);
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes heroFade {
     from {
         opacity: 0;
         transform: translateY(25px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-/* TABLET */
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
 
-@media (max-width: 1200px) {
-
-    .navbar {
-        padding: 0 5%;
-    }
-
+@media (max-width: 1000px) {
     .nav-links {
-        gap: 20px;
+        gap: 15px;
     }
 
     .nav-links a {
-        font-size: 14px;
+        font-size: 11px;
     }
 
-    .logo img {
-        width: 190px;
+    .services-grid {
+        gap: 15px;
     }
 
-    .logo {
-        min-width: 190px;
+    .service-card {
+        height: 400px;
     }
 
-    .nav-book {
-        min-width: 145px;
-        padding: 12px 20px;
+    .service-card h2 {
+        font-size: 25px;
     }
 }
 
-/* MOBILE */
-
-@media (max-width: 768px) {
-
-    .hero {
-        min-height: 100svh;
-        background-position: center center;
-    }
-
+@media (max-width: 760px) {
     .navbar {
-        min-height: 95px;
-        padding: 0 20px;
-        justify-content: center;
-    }
-
-    .logo {
-        min-width: auto;
+        min-height: 75px;
+        padding: 12px 4%;
     }
 
     .logo img {
-        width: 175px;
-        height: 85px;
+        width: 125px;
     }
 
-    .nav-links,
-    .nav-book {
+    .nav-links {
         display: none;
     }
 
     .hero-content {
-        padding: 30px 20px 100px;
-    }
-
-    .hero-small-title {
-        font-size: 21px;
-        margin-bottom: 23px;
+        padding-bottom: 65px;
     }
 
     .hero-content h1 {
-        font-size: 35px;
-        line-height: 1.3;
-        margin-bottom: 20px;
+        font-size: 38px;
     }
 
-    .hero-description {
-        font-size: 14px;
-        line-height: 1.8;
-        margin-bottom: 35px;
+    .hero-content p {
+        font-size: 13px;
     }
 
-    .hero-buttons {
-        gap: 13px;
-        flex-wrap: wrap;
+    .services-section {
+        padding: 45px 12px 65px;
     }
 
-    .hero-btn {
-        min-width: 145px;
-        min-height: 49px;
-        padding: 12px 18px;
-        font-size: 12px;
+    .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
     }
 
-    .contact-floating {
-        left: 13px;
-        bottom: 17px;
+    .service-card {
+        height: 350px;
     }
 
-    .phone-circle {
-        width: 57px;
-        height: 57px;
+    .service-card h2 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 430px) {
+    .services-grid {
+        gap: 12px;
     }
 
-    .phone-circle svg {
-        width: 27px;
-        height: 27px;
+    .service-card {
+        height: 270px;
+    }
+
+    .service-card h2 {
+        font-size: 21px;
+        padding: 8px;
+    }
+
+    .services-section {
+        padding: 35px 10px 55px;
+    }
+
+    .contact-fixed {
+        left: 10px;
+        bottom: 15px;
+    }
+
+    .contact-icon {
+        width: 42px;
+        height: 42px;
     }
 
     .contact-label {
-        font-size: 13px;
-        padding: 6px 12px;
+        font-size: 10px;
+        padding: 8px 10px;
     }
 
-    .whatsapp-floating {
-        width: 57px;
-        height: 57px;
-        right: 16px;
-        bottom: 17px;
-    }
-
-    .whatsapp-floating svg {
-        width: 32px;
-        height: 32px;
+    .whatsapp-fixed {
+        width: 45px;
+        height: 45px;
+        right: 12px;
+        bottom: 15px;
     }
 }
-
-/* SMALL MOBILE */
-
-@media (max-width: 380px) {
-
-    .hero-content h1 {
-        font-size: 30px;
-    }
-
-    .hero-small-title {
-        font-size: 18px;
-    }
-
-    .hero-description {
-        font-size: 13px;
-    }
-
-    .hero-btn {
-        min-width: 130px;
-    }
-}
-
 </style>
 </head>
 
 <body>
 
-<section class="hero">
+<!-- =========================
+     FIRST PAGE
+========================= -->
 
-    <!-- NAVBAR -->
+<section class="hero" id="home">
 
-    <header class="navbar">
+    <nav class="navbar">
 
-        <a href="#" class="logo">
-
+        <a href="#home" class="logo">
             <img
                 src="https://raw.githubusercontent.com/mradnanhaiking-afk/cab-miitra-/main/CAB-MITRA-11.webp"
                 alt="CabMitra Logo"
             >
-
         </a>
 
-        <nav class="nav-links">
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#services">Outstation Packages⌄</a>
+            <a href="#services">Cabs⌄</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="#services" class="nav-book">BOOK NOW</a>
+        </div>
 
-            <a href="#">Home</a>
+    </nav>
 
-            <a href="#">Services</a>
+    <div class="hero-content">
 
-            <a href="#" class="dropdown">
-
-                Outstation Packages
-
-                <svg viewBox="0 0 24 24" fill="none"
-                     stroke="currentColor" stroke-width="2.5">
-                    <path d="m6 9 6 6 6-6"/>
-                </svg>
-
-            </a>
-
-            <a href="#" class="dropdown">
-
-                Cabs
-
-                <svg viewBox="0 0 24 24" fill="none"
-                     stroke="currentColor" stroke-width="2.5">
-                    <path d="m6 9 6 6 6-6"/>
-                </svg>
-
-            </a>
-
-            <a href="#">About</a>
-
-            <a href="#">Contact</a>
-
-        </nav>
-
-        <a href="#" class="nav-book">BOOK NOW</a>
-
-    </header>
-
-
-    <!-- HERO CONTENT -->
-
-    <main class="hero-content">
-
-        <div class="hero-small-title">
+        <div class="hero-small">
             CabMitra - Where Journeys Begin
         </div>
 
@@ -577,67 +512,118 @@ body {
             CabMitra!
         </h1>
 
-        <p class="hero-description">
-            Explore the vibrant city of Bengaluru with our reliable cab services,
-            or embark on unforgettable outstation journeys with cab mitra's
-            customizable trip packages
+        <p>
+            Explore the vibrant city of Bengaluru with our reliable cab
+            services, or embark on unforgettable outstation journeys
+            with cab mitra's customizable trip packages.
         </p>
 
         <div class="hero-buttons">
-
-            <a href="#" class="hero-btn book-btn">
-                BOOK NOW
-            </a>
-
-            <a href="tel:+910000000000" class="hero-btn call-btn">
-                CALL NOW
-            </a>
-
+            <a href="#services" class="book-btn">BOOK NOW</a>
+            <a href="tel:+910000000000" class="call-btn">CALL NOW</a>
         </div>
 
-    </main>
-
-
-    <!-- CONTACT US BUTTON -->
-
-    <a href="tel:+910000000000" class="contact-floating">
-
-        <div class="phone-circle">
-
-            <svg viewBox="0 0 24 24">
-
-                <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.56 3.58.56.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.46.56 3.58a1 1 0 0 1-.25 1.01z"/>
-
-            </svg>
-
-        </div>
-
-        <span class="contact-label">
-            Contact us
-        </span>
-
-    </a>
-
-
-    <!-- WHATSAPP BUTTON -->
-
-    <a
-        href="https://wa.me/910000000000"
-        class="whatsapp-floating"
-        target="_blank"
-        rel="noopener"
-        aria-label="Contact us on WhatsApp"
-    >
-
-        <svg viewBox="0 0 32 32">
-
-            <path d="M16 .5A15.5 15.5 0 0 0 2.7 24L.5 31.5l7.7-2A15.5 15.5 0 1 0 16 .5zm0 28.3a12.7 12.7 0 0 1-6.5-1.8l-.5-.3-4.5 1.2 1.2-4.4-.3-.5A12.7 12.7 0 1 1 16 28.8zm7-9.5c-.4-.2-2.2-1.1-2.6-1.2-.3-.1-.6-.2-.8.2-.3.4-.9 1.2-1.1 1.4-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.7.1-.3 0-.5 0-.7-.1-.2-.8-2-1.1-2.7-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.9 5.2.8.3 1.4.6 1.9.7.8.3 1.5.2 2 .1.6-.1 2.2-.9 2.5-1.8.3-.9.3-1.6.2-1.8-.1-.2-.3-.3-.7-.5z"/>
-
-        </svg>
-
-    </a>
+    </div>
 
 </section>
+
+
+<!-- =========================
+     SECOND PAGE - FOUR CARDS
+========================= -->
+
+<section class="services-section" id="services">
+
+    <div class="services-grid">
+
+        <!-- 1: FROM TOP -->
+
+        <div class="service-card local-card from-top">
+            <h2>
+                Local<br>
+                Cabs
+            </h2>
+        </div>
+
+        <!-- 2: FROM BOTTOM -->
+
+        <div class="service-card airport-card from-bottom">
+            <h2>
+                Airport<br>
+                Cabs
+            </h2>
+        </div>
+
+        <!-- 3: FROM TOP -->
+
+        <div class="service-card outstation-card from-top">
+            <h2>
+                Outstation<br>
+                Cabs
+            </h2>
+        </div>
+
+        <!-- 4: FROM BOTTOM -->
+
+        <div class="service-card trip-card from-bottom">
+            <h2>
+                Trip<br>
+                Packages
+            </h2>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FIXED CONTACT BUTTONS -->
+
+<a href="tel:+910000000000" class="contact-fixed" id="contact">
+    <span class="contact-icon">☎</span>
+    <span class="contact-label">Contact us</span>
+</a>
+
+<a
+    href="https://wa.me/910000000000"
+    class="whatsapp-fixed"
+    target="_blank"
+    aria-label="WhatsApp"
+>
+    ✆
+</a>
+
+
+<!-- =========================
+     SCROLL REVEAL SCRIPT
+========================= -->
+
+<script>
+
+const serviceCards = document.querySelectorAll(".service-card");
+
+const observer = new IntersectionObserver((entries, observer) => {
+
+    entries.forEach((entry) => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.classList.add("show");
+
+            observer.unobserve(entry.target);
+        }
+
+    });
+
+}, {
+    threshold: 0.18
+});
+
+serviceCards.forEach((card) => {
+    observer.observe(card);
+});
+
+</script>
 
 </body>
 </html>
