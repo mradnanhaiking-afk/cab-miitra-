@@ -86,17 +86,10 @@ body {
     width: 245px;
     height: 105px;
     object-fit: contain;
+    display: block;
 }
 
-.logo-fallback {
-    display: none;
-    color: white;
-    font-size: 29px;
-    font-weight: 800;
-    letter-spacing: 1px;
-}
-
-/* NAVIGATION LINKS */
+/* NAVIGATION */
 
 .nav-links {
     display: flex;
@@ -352,7 +345,7 @@ body {
     fill: white;
 }
 
-/* ENTRANCE ANIMATION */
+/* ANIMATION */
 
 @keyframes fadeUp {
     from {
@@ -526,12 +519,9 @@ body {
         <a href="#" class="logo">
 
             <img
-                src="logo.png"
+                src="https://raw.githubusercontent.com/mradnanhaiking-afk/cab-miitra-/main/CAB-MITRA-11.webp"
                 alt="CabMitra Logo"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
             >
-
-            <span class="logo-fallback">CAB MITRA</span>
 
         </a>
 
@@ -608,7 +598,7 @@ body {
     </main>
 
 
-    <!-- CONTACT US -->
+    <!-- CONTACT US BUTTON -->
 
     <a href="tel:+910000000000" class="contact-floating">
 
@@ -629,7 +619,7 @@ body {
     </a>
 
 
-    <!-- WHATSAPP -->
+    <!-- WHATSAPP BUTTON -->
 
     <a
         href="https://wa.me/910000000000"
